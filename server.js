@@ -34,17 +34,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
-// const dbtest = mysql.createConnection({
-//     host:'db4free.net',
-//     user:'capstone357',
-//     password:'CAPSTONEguidance123',
-//     database:'dbtesting357'
-// });
+const dbtest = mysql.createConnection({
+    host:'db4free.net',
+    user:'capstone357',
+    password:'CAPSTONEguidance123',
+    database:'dbtesting357'
+});
 
-// const sqlupdatepass= "SELECT * FROM accounts ";
-// dbtest.query(sqlupdatepass,(err,result)=>{
-//     console.log(result)
-// })
+const sqlupdatepass= "SELECT * FROM accounts ";
+dbtest.query(sqlupdatepass,(err,result)=>{
+    console.log(result)
+})
 
 cron.schedule("00 00 06 * * *", async function(){
         let gcContactNum = ''
