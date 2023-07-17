@@ -10,6 +10,7 @@ const db = require('./middleware/myDB');
 
 const cron = require('node-cron')
 
+const mysql = require("mysql");
 
 const fetch = require('node-fetch')
 
@@ -31,6 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // built-in middleware for json 
 app.use(express.json());
+
 
 const dbtest = mysql.createConnection({
     host:'db4free.net',
