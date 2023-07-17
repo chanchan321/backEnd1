@@ -1,14 +1,14 @@
 const whitelist = [
-    'http://localhost:3000','http://localhost:3001','https://front-end-xvvj.onrender.com/'
+    'http://localhost:3000','http://localhost:3001'
 
 ];
 
-const config = {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-    }
-  };
+// const config = {
+//     headers: {
+//       "Access-Control-Allow-Origin": "*",
+//       "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+//     }
+//   };
 
 const corsOptions = {
     origin: (origin, callback) => {
@@ -18,7 +18,7 @@ const corsOptions = {
             callback(new Error('Not allowed by CORSs'));
         }
     },
-    config,
+    // config,
     credentials: true,
     optionsSuccessStatus: 200
 }
