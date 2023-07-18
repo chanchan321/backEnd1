@@ -1,5 +1,5 @@
 const whitelist = [
-    'https://capstonefronte.onrender.com/'
+    'https://capstonefronte.onrender.com'
 
 ];
 
